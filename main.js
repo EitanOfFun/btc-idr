@@ -18,6 +18,9 @@ $('#btc').keyup(function() {
       idrVal = btcVal * lastPrice
       $('#idr').val(parseInt(idrVal));
     }
+    else {
+      $('#idr').val("")
+    }
 });
 
 $('#idr').keyup(function() {
@@ -25,5 +28,8 @@ $('#idr').keyup(function() {
     if (idrVal) {
       btcVal = idrVal / lastPrice;
       $('#btc').val(btcVal.toFixed(8));
+    }
+    else {
+      $('#btc').val("")
     }
 });
