@@ -5,7 +5,7 @@ function refreshLastPrice() {
   $lastPrice.html("");
   $.get("https://vip.bitcoin.co.id/api/btc_idr/ticker")
     .then(function (data) {
-      lastPrice = JSON.parse(data).ticker.last
+      lastPrice = JSON.parse(data).ticker.last - 100000
       $lastPrice.html(lastPrice);
   });
 }
